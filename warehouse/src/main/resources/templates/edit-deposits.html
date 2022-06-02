@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit deposits</title>
+</head>
+<body>
+
+<form method="post" th:action="@{/edit-deposit}" th:object="${deposit}">
+
+    <input th:field="*{identNumber}">
+
+    <label for="identNumber">Deposit identNumber</label><br>
+    <input type="text" id="identNumber" name="identNumber" th:field="*{identNumber}"><br>
+
+    <label for="town">Deposit town</label><br>
+    <input type="text" id="town" name="town" th:field="*{town}"><br>
+
+
+    <label for="street">Deposit street:</label><br>
+    <input type="text" id="street" name="street" th:field="*{street}"><br>
+
+    <br>
+    <input type = "submit" value="OK">
+
+</form>
+</body>
+</html>
